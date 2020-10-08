@@ -5,11 +5,11 @@
 -------------------------------------------------------------------------------------------------------------------
 
 Request:
-GET - http://localhost/miun_courses/course 
-GET - http://localhost/miun_courses/course?id=1
-POST - http://localhost/miun_courses/course '{"name": "coursename", "code": "coursecode", "prog": "A", "syllabus": "http link"}'
-PUT - http://localhost/miun_courses/course?id=1 '{"name": "coursename", "code": "coursecode", "prog": "A", "syllabus": "http link"}'
-DELETE - http://localhost/miun_courses/course?id=1 
+GET - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/course.php
+GET - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/course.php?id=1
+POST - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/course.php '{"name": "coursename", "code": "coursecode", "prog": "A", "syllabus": "http link"}'
+PUT - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/course.php?id=1 '{"name": "coursename", "code": "coursecode", "prog": "A", "syllabus": "http link"}'
+DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/course.php?id=1
 */
 
 
