@@ -24,7 +24,7 @@ header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, x-Requested-With');
 
 $method = $_SERVER['REQUEST_METHOD'];
-// Om en parameter av id finns i urlen
+// If an ID is used in the URL
 if(isset($_GET['id'])){
     $id = $_GET['id'];
 }
