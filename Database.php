@@ -6,7 +6,7 @@ class Database{
     private $host = "studentmysql.miun.se";
     private $db_name = "maso1905";
     private $username = "maso1905";
-    private $password = "password";
+    private $password = "pm5j5kbc";
     public $conn;
   
     // get the database connection
