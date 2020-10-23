@@ -8,6 +8,7 @@ to read stored courses I have finished and my recent curriculum vitae informatio
 ### Test Education:
 
 Database structure:
+
 -------------------------------------------------------------------------------------------------------------------
 | ID (int, AI, primary key) | school (Varchar(64)) | program (Varchar(64)) | start (DATE(64)) | end (DATE(64)) |
 -------------------------------------------------------------------------------------------------------------------
