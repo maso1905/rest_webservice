@@ -7,8 +7,8 @@
 Request:
 GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php
 GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=1
-POST - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php '{"company": "companyname", "title": "titlename", "start": "20000101", "end": "20000202"}'
-PUT - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=1 '{"company": "companyname", "title": "titlename", "start": "20000101", "end": "20000202"}'
+POST - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php '{"company": "companyname", "title": "titlename", "start": "2000-01-01", "end": "2000-02-02"}'
+PUT - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=1 '{"company": "companyname", "title": "titlename", "start": "2000-01-01", "end": "2000-02-02"}'
 DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=1
 */
 
@@ -40,10 +40,10 @@ switch ($method) {
     // Get posts
     case "GET":
         if(isset($id)){
-            // Gets specific course if ID is requested
+            // Gets specific work if ID is requested
             $result = $wrk->readOne($id);
         }else {
-            // Gets all courses from database
+            // Gets all work from database
             $result = $wrk->read();
         }
 
@@ -64,7 +64,7 @@ switch ($method) {
         $wrk->start = $data->start;
         $wrk->end = $data->end;
 
-        // Creates new course-row in database, error message if creation failed
+        // Creates new work-row in database, error message if creation failed
         if($wrk->create()) {
             http_response_code(201);
             $result = array("message" => "work created");
@@ -87,7 +87,7 @@ switch ($method) {
             $wrk->start = $data->start;
             $wrk->end = $data->end;  
 
-            // Updates course
+            // Updates work
             if($wrk->update($id)) {
                 http_response_code(200);
                 $result = array("message" => "work updated");
@@ -103,7 +103,7 @@ switch ($method) {
             http_response_code(510);
             $result = array("message" => "No ID was sent");
         }else {
-            // Deletes course with ID
+            // Deletes work with ID
             if($wrk->delete($id)) {
                 http_response_code(200);
                 $result = array("message" => "work deleted");

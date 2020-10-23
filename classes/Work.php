@@ -44,7 +44,7 @@ class Work{
         return $work_arr;
     }
     
-    // Read one course from ID
+    // Read one work from ID
     public function readOne($id){
         $id = intval($id);
         $this->sql = "SELECT * FROM $this->table WHERE id='$id'";
@@ -67,20 +67,20 @@ class Work{
         return $work_arr;
     }
 
-    // Create new course
+    // Create new work
     public function create(){ 
         $this->sql = "INSERT INTO $this->table(company, title, start, end)VALUES('$this->company', '$this->title', '$this->start', '$this->end')";
         return $this->db->query($this->sql);
     }
     
-    // Update course
+    // Update work
     public function update($id){
         $id = intval($id);
         $this->sql = "UPDATE $this->table SET company='$this->company', title='$this->title', start='$this->start', end='$this->end' WHERE id='$id'";
         return $this->result = $this->db->query($this->sql);
    }
 
-    // Delete course
+    // Delete work
     public function delete($id){
         $id = intval($id);
         $this->sql = "DELETE FROM $this->table WHERE id='$id'";

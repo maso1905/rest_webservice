@@ -21,7 +21,7 @@ class Educations{
         $this->db = $db;
     }
     
-    // Read all courses
+    // Read all education
     public function read(){
 
         $this->sql = "SELECT * FROM $this->table ORDER BY start DESC";
@@ -44,7 +44,7 @@ class Educations{
         return $education_arr;
     }
     
-    // Read one course from ID
+    // Read one education from ID
     public function readOne($id){
         $id = intval($id);
         $this->sql = "SELECT * FROM $this->table WHERE id='$id'";
@@ -67,20 +67,20 @@ class Educations{
         return $education_arr;
     }
 
-    // Create new course
+    // Create new education
     public function create(){ 
         $this->sql = "INSERT INTO $this->table(school, program, start, end)VALUES('$this->school', '$this->program', '$this->start', '$this->end')";
         return $this->db->query($this->sql);
     }
     
-    // Update course
+    // Update education
     public function update($id){
         $id = intval($id);
         $this->sql = "UPDATE $this->table SET school='$this->school', program='$this->program', start='$this->start', end='$this->end' WHERE id='$id'";
         return $this->result = $this->db->query($this->sql);
    }
 
-    // Delete course
+    // Delete education
     public function delete($id){
         $id = intval($id);
         $this->sql = "DELETE FROM $this->table WHERE id='$id'";

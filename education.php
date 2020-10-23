@@ -7,8 +7,8 @@
 Request:
 GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php
 GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?id=1
-POST - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php '{"school": "schoolname", "program": "programname", "start": "20000101", "end": "20000202"}'
-PUT - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?id=1 '{"school": "schoolname", "program": "programname", "start": "20000101", "end": "20000202"}'
+POST - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php '{"school": "schoolname", "program": "programname", "start": "2000-01-01", "end": "2000-02-02"}'
+PUT - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?id=1 '{"school": "schoolname", "program": "programname", "start": "2000-01-01", "end": "2000-02-02"}'
 DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?id=1
 */
 
@@ -31,7 +31,7 @@ if(isset($_GET['id'])){
 // Connect to server
 $database = new Database();
 $db = $database->connect();
-// Create instance of Course-class for SQL commands with connection parameter
+// Create instance of Education-class for SQL commands with connection parameter
 $edu = new Educations($db);
 
 
@@ -42,7 +42,7 @@ switch ($method) {
             // Gets specific course if ID is requested
             $result = $edu->readOne($id);
         }else {
-            // Gets all courses from database
+            // Gets all educations from database
             $result = $edu->read();
         }
 
@@ -86,7 +86,7 @@ switch ($method) {
             $edu->start = $data->start;
             $edu->end = $data->end;  
 
-            // Updates course
+            // Updates education
             if($edu->update($id)) {
                 http_response_code(200);
                 $result = array("message" => "Education updated");
@@ -102,7 +102,7 @@ switch ($method) {
             http_response_code(510);
             $result = array("message" => "No ID was sent");
         }else {
-            // Deletes course with ID
+            // Deletes education with ID
             if($edu->delete($id)) {
                 http_response_code(200);
                 $result = array("message" => "Education deleted");
