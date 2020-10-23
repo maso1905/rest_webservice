@@ -7,6 +7,11 @@ to read stored courses I have finished and my recent curriculum vitae informatio
 
 ### Test Education:
 
+Database structure:
+-------------------------------------------------------------------------------------------------------------------
+| ID (int, AI, primary key) | school (Varchar(64)) | program (Varchar(64)) | start (DATE(64)) | end (DATE(64)) |
+-------------------------------------------------------------------------------------------------------------------
+
 Request:
 * GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php
 * GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?id=1
@@ -16,6 +21,11 @@ Request:
 
 ### Test Work:
 
+Database structure:
+-------------------------------------------------------------------------------------------------------------------
+| ID (int, AI, primary key) | company (Varchar(64)) | title (Varchar(64)) | start (DATE(64)) | end (DATE(64)) |
+-------------------------------------------------------------------------------------------------------------------
+
 Request:
 * GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php
 * GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=1
@@ -24,6 +34,11 @@ Request:
 * DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=1
 
 ### Test Course:
+
+Database structure:
+-------------------------------------------------------------------------------------------------------------------
+| ID (int, AI, primary key) | name (Varchar(64)) | code (Varchar(64)) | prog (Char(1)) | syllabus (Varchar(2083)) |
+-------------------------------------------------------------------------------------------------------------------
 
 Request:
 * GET - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/course.php
