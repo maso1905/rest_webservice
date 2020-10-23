@@ -12,9 +12,8 @@ PUT - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?i
 DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?id=1
 */
 
-
 require 'Database.php';
-require 'classes/Education.php';
+require 'classes/Educations.php';
 // require 'errors.php';
 
 // Header information
@@ -33,7 +32,7 @@ if(isset($_GET['id'])){
 $database = new Database();
 $db = $database->connect();
 // Create instance of Course-class for SQL commands with connection parameter
-$edu = new Education($db);
+$edu = new Educations($db);
 
 
 switch ($method) {

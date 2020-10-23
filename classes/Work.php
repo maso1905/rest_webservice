@@ -24,7 +24,7 @@ class Work{
     // Read all work
     public function read(){
 
-        $this->sql = "SELECT * FROM $this->table";
+        $this->sql = "SELECT * FROM $this->table ORDER BY start DESC";
         $this->result = $this->db->query($this->sql);
         $work_arr = array();
         //Loop through result and stores in an array

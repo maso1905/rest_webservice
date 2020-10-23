@@ -1,7 +1,7 @@
 
 <?php
 
-class Education{
+class Educations{
 
     // database connection and table name
     private $db;
@@ -24,7 +24,7 @@ class Education{
     // Read all courses
     public function read(){
 
-        $this->sql = "SELECT * FROM $this->table";
+        $this->sql = "SELECT * FROM $this->table ORDER BY start DESC";
         $this->result = $this->db->query($this->sql);
         $education_arr = array();
         //Loop through result and stores in an array
