@@ -15,7 +15,7 @@ DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=
 
 require 'Database.php';
 require 'classes/Work.php';
-// require 'errors.php';
+require 'errors.php';
 
 // Header information
 header('Content-Type: application/json;');

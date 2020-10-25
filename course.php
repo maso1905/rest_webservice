@@ -15,7 +15,7 @@ DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/course.php?
 
 require 'Database.php';
 require 'classes/Courses.php';
-// require 'errors.php';
+require 'errors.php';
 
 // Header information
 header('Content-Type: application/json;');
