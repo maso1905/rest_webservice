@@ -5,11 +5,11 @@
 -------------------------------------------------------------------------------------------------------------------
 
 Request:
-GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php
-GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=1
-POST - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php '{"company": "companyname", "title": "titlename", "start": "2000-01-01", "end": "2000-02-02"}'
-PUT - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=1 '{"company": "companyname", "title": "titlename", "start": "2000-01-01", "end": "2000-02-02"}'
-DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/work.php?id=1
+GET - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/work.php
+GET - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/work.php?id=1
+POST - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/work.php '{"company": "companyname", "title": "titlename", "start": "2000-01-01", "end": "2000-02-02"}'
+PUT - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/work.php?id=1 '{"company": "companyname", "title": "titlename", "start": "2000-01-01", "end": "2000-02-02"}'
+DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/work.php?id=1
 */
 
 

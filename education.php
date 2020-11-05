@@ -5,11 +5,11 @@
 -------------------------------------------------------------------------------------------------------------------
 
 Request:
-GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php
-GET - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?id=1
-POST - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php '{"school": "schoolname", "program": "programname", "start": "2000-01-01", "end": "2000-02-02"}'
-PUT - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?id=1 '{"school": "schoolname", "program": "programname", "start": "2000-01-01", "end": "2000-02-02"}'
-DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/cv_work_edu/education.php?id=1
+GET - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/education.php
+GET - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/education.php?id=1
+POST - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/education.php '{"school": "schoolname", "program": "programname", "start": "2000-01-01", "end": "2000-02-02"}'
+PUT - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/education.php?id=1 '{"school": "schoolname", "program": "programname", "start": "2000-01-01", "end": "2000-02-02"}'
+DELETE - http://studenter.miun.se/~maso1905/dt173g/rest/miun_courses/education.php?id=1
 */
 
 require 'Database.php';
